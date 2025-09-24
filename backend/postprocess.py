@@ -8,16 +8,24 @@ class_treatments = {
     'vasc': "Consult doctor for vascular lesion treatment options."
 }
 
-CONFIDENCE_THRESHOLD = 0.1
+CONFIDENCE_THRESHOLD = 0.46
 
 def process_prediction(predicted_class, confidence):
     """Return final JSON response with messages and notes."""
-    if confidence < CONFIDENCE_THRESHOLD:
+    if confidence < 0.45 :
         return {
             "disease": "Unknown / Not a skin disease",
             "confidence": round(confidence, 2),
             "message": "Image does not resemble any known skin disease. Please try a clearer or relevant image."
         }
+    
+    if confidence > 0.60 :
+        return {
+            "disease": "Unknown / Not a skin disease",
+            "confidence": round(confidence, 2),
+            "message": "Image does not resemble any known skin disease. Please try a clearer or relevant image."
+        }
+    
 
     return {
         "disease": predicted_class,
