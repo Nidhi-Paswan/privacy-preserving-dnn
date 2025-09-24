@@ -1,0 +1,38 @@
+.upload-container {
+  border: 1px solid #ccc;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.upload-form input {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.upload-form button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.upload-form button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.result {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
